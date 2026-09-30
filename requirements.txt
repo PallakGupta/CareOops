@@ -1,0 +1,9 @@
+langgraph>=0.2.60
+langchain-core>=0.3
+langchain-openai>=0.2
+fastapi>=0.110
+uvicorn>=0.29
+streamlit>=1.36
+requests>=2.31
+python-dotenv>=1.0
+pydantic>=2.6

@@ -1,0 +1,78 @@
+{
+  "_comment": "Synthea-style FAKE patients for the CareOps demo. No real patient data. Each patient is built to demonstrate a different pipeline path: P001 = safety agent FLAGS the drug, P002 = clean SAFE path, P003 = Reflection Agent catches a hallucination and routes back once.",
+  "patients": [
+    {
+      "id": "P001",
+      "name": "Ramesh Kumar",
+      "age": 67,
+      "sex": "M",
+      "conditions": ["Essential hypertension", "Type 2 diabetes mellitus", "Chronic kidney disease, stage 3b"],
+      "allergies": [
+        {"substance": "Penicillin", "allergy_class": "penicillin", "reaction": "Hives", "severity": "moderate"}
+      ],
+      "current_medications": [
+        {"name": "lisinopril", "dose": "20 mg", "frequency": "once daily", "indication": "Hypertension"},
+        {"name": "metformin", "dose": "500 mg", "frequency": "twice daily", "indication": "Type 2 diabetes"},
+        {"name": "atorvastatin", "dose": "20 mg", "frequency": "once nightly", "indication": "Hyperlipidemia"}
+      ],
+      "recent_labs": [
+        {"test": "eGFR", "value": 38, "unit": "mL/min/1.73m2", "reference_range": ">= 60", "flag": "LOW", "date": "2026-08-28"},
+        {"test": "Creatinine", "value": 1.8, "unit": "mg/dL", "reference_range": "0.7-1.3", "flag": "HIGH", "date": "2026-08-28"},
+        {"test": "Potassium", "value": 5.1, "unit": "mmol/L", "reference_range": "3.5-5.0", "flag": "HIGH", "date": "2026-08-28"},
+        {"test": "HbA1c", "value": 7.4, "unit": "%", "reference_range": "< 7.0", "flag": "HIGH", "date": "2026-08-28"}
+      ],
+      "past_visits": [
+        {"date": "2026-08-28", "reason": "Diabetes and CKD follow-up", "summary": "eGFR down from 44 to 38. Continued lisinopril for renal protection. Metformin dose unchanged."},
+        {"date": "2026-03-10", "reason": "Hypertension review", "summary": "BP 138/84. Lisinopril increased to 20 mg."}
+      ],
+      "sample_message": "My right knee has been hurting for about 2 weeks now, it's worse when I climb stairs. I'd say the pain is 6 out of 10 and it's a bit swollen and stiff in the mornings."
+    },
+    {
+      "id": "P002",
+      "name": "Priya Sharma",
+      "age": 34,
+      "sex": "F",
+      "conditions": ["Seasonal allergic rhinitis"],
+      "allergies": [
+        {"substance": "Sulfonamide antibiotics", "allergy_class": "sulfonamide", "reaction": "Rash", "severity": "mild"}
+      ],
+      "current_medications": [
+        {"name": "cetirizine", "dose": "10 mg", "frequency": "once daily as needed", "indication": "Allergic rhinitis"}
+      ],
+      "recent_labs": [
+        {"test": "eGFR", "value": 108, "unit": "mL/min/1.73m2", "reference_range": ">= 60", "flag": "NORMAL", "date": "2026-05-14"},
+        {"test": "Hemoglobin", "value": 12.9, "unit": "g/dL", "reference_range": "12.0-15.5", "flag": "NORMAL", "date": "2026-05-14"},
+        {"test": "WBC", "value": 7.2, "unit": "x10^9/L", "reference_range": "4.0-11.0", "flag": "NORMAL", "date": "2026-05-14"}
+      ],
+      "past_visits": [
+        {"date": "2026-05-14", "reason": "Annual physical", "summary": "Healthy. Routine labs normal. Cetirizine PRN for seasonal allergies."}
+      ],
+      "sample_message": "I've had a really sore throat and fever for 3 days. It hurts a lot to swallow and my neck glands feel swollen. I don't have a cough."
+    },
+    {
+      "id": "P003",
+      "name": "John Mathew",
+      "age": 58,
+      "sex": "M",
+      "conditions": ["Atrial fibrillation", "Essential hypertension"],
+      "allergies": [
+        {"substance": "Sulfamethoxazole (sulfa drugs)", "allergy_class": "sulfonamide", "reaction": "Severe skin rash", "severity": "severe"},
+        {"substance": "Codeine", "allergy_class": "opioid", "reaction": "Severe nausea and vomiting", "severity": "moderate"}
+      ],
+      "current_medications": [
+        {"name": "warfarin", "dose": "5 mg", "frequency": "once daily", "indication": "Stroke prevention in atrial fibrillation"},
+        {"name": "metoprolol", "dose": "50 mg", "frequency": "once daily", "indication": "Rate control / hypertension"}
+      ],
+      "recent_labs": [
+        {"test": "INR", "value": 2.6, "unit": "ratio", "reference_range": "2.0-3.0 (therapeutic)", "flag": "NORMAL", "date": "2026-09-12"},
+        {"test": "eGFR", "value": 78, "unit": "mL/min/1.73m2", "reference_range": ">= 60", "flag": "NORMAL", "date": "2026-09-12"},
+        {"test": "Hemoglobin", "value": 14.1, "unit": "g/dL", "reference_range": "13.5-17.5", "flag": "NORMAL", "date": "2026-09-12"}
+      ],
+      "past_visits": [
+        {"date": "2026-09-12", "reason": "Anticoagulation clinic", "summary": "INR 2.6, therapeutic. Continue warfarin 5 mg daily."},
+        {"date": "2026-06-02", "reason": "AF follow-up", "summary": "Rate controlled on metoprolol. No bleeding events."}
+      ],
+      "sample_message": "It's been burning when I pee for the last 2 days and I keep needing to go every hour. No fever, no back pain, but it's really uncomfortable."
+    }
+  ]
+}
